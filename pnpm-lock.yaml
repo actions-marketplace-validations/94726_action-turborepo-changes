@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@actions/core':
-    specifier: ^1.10.0
-    version: 1.10.0
+    specifier: ^3.0.0
+    version: 3.0.0
   '@manypkg/get-packages':
     specifier: ^2.1.0
     version: 2.1.0
@@ -40,17 +40,28 @@ devDependencies:
 
 packages:
 
-  /@actions/core@1.10.0:
-    resolution: {integrity: sha512-2aZDDa3zrrZbP5ZYg159sNoLRb61nQ7awl5pSvIq5Qpj81vwDzdMRKzkWJGJuwVvWpvZKx7vspJALyvaaIQyug==}
+  /@actions/core@3.0.0:
+    resolution: {integrity: sha512-zYt6cz+ivnTmiT/ksRVriMBOiuoUpDCJJlZ5KPl2/FRdvwU3f7MPh9qftvbkXJThragzUZieit2nyHUyw53Seg==}
     dependencies:
-      '@actions/http-client': 2.0.1
-      uuid: 8.3.2
+      '@actions/exec': 3.0.0
+      '@actions/http-client': 4.0.0
     dev: false
 
-  /@actions/http-client@2.0.1:
-    resolution: {integrity: sha512-PIXiMVtz6VvyaRsGY268qvj57hXQEpsYogYOu2nrQhlf+XCGmZstmuZBbAybUl1nQGnvS1k1eEsQ69ZoD7xlSw==}
+  /@actions/exec@3.0.0:
+    resolution: {integrity: sha512-6xH/puSoNBXb72VPlZVm7vQ+svQpFyA96qdDBvhB8eNZOE8LtPf9L4oAsfzK/crCL8YZ+19fKYVnM63Sl+Xzlw==}
+    dependencies:
+      '@actions/io': 3.0.2
+    dev: false
+
+  /@actions/http-client@4.0.0:
+    resolution: {integrity: sha512-QuwPsgVMsD6qaPD57GLZi9sqzAZCtiJT8kVBCDpLtxhL5MydQ4gS+DrejtZZPdIYyB1e95uCK9Luyds7ybHI3g==}
     dependencies:
       tunnel: 0.0.6
+      undici: 6.24.1
+    dev: false
+
+  /@actions/io@3.0.2:
+    resolution: {integrity: sha512-nRBchcMM+QK1pdjO7/idu86rbJI5YHUKCvKs0KxnSYbVe3F51UfGxuZX4Qy/fWlp6l7gWFwIkrOzN+oUK03kfw==}
     dev: false
 
   /@babel/runtime@7.20.13:
@@ -1971,6 +1982,11 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
+  /undici@6.24.1:
+    resolution: {integrity: sha512-sC+b0tB1whOCzbtlx20fx3WgCXwkW627p4EA9uM+/tNNPkSS+eSEld6pAs9nDv7WbY1UUljBMYPtu9BCOrCWKA==}
+    engines: {node: '>=18.17'}
+    dev: false
+
   /universalify@0.1.2:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
     engines: {node: '>= 4.0.0'}
@@ -1992,11 +2008,6 @@ packages:
     dependencies:
       punycode: 2.3.0
     dev: true
-
-  /uuid@8.3.2:
-    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
-    hasBin: true
-    dev: false
 
   /which-boxed-primitive@1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
